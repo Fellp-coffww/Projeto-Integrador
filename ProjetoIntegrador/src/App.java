@@ -1,7 +1,10 @@
 public class App {
     public static void main(String[] args) throws Exception {
 
-        System.out.println("Hello, World!");
+      Cadastro cadastro = new Cadastro();
+
+      cadastro.addFilme();
+      System.out.println(cadastro.retornaFilmes());
     
     }
 }
