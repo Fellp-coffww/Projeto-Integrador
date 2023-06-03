@@ -37,19 +37,83 @@ public void addFilme(){
     listaFilme.add(filme);
 }
 
+
+
+
+public void addSala(){
+
+    Sala sala = new Sala();
+
+    System.out.println("Nome da sala: ");
+    sala.setNomeDaSala(sc.nextLine());
+
+    System.out.print("Números de colunas: ");
+    sala.setColunas(Integer.parseInt(sc.nextLine()));
+    
+    System.out.print("Números de linhas: ");
+    sala.setLinhas(Integer.parseInt(sc.nextLine()));
+
+    listaSala.add(sala);
+    
+
+}
+
+public void addSessao(){
+
+ Sessao sessao = new Sessao();
+ System.out.println(retornaFilmes());
+ System.out.print("Seleciona o filme pelo seu ID: ");
+ sessao.setFilme(listaFilme.get(Integer.parseInt(sc.nextLine())));
+ System.out.print("Seleciona o filme pelo seu ID: ");
+ listaSessao.add(sessao);
+
+
+
+}
+
+
 public String retornaFilmes(){
 
 String temp  = ""; 
 
 for (int n = 0; n < listaFilme.size(); n++){
 
-    temp = temp + listaFilme.get(n).toString();
+    temp = temp +  n + " "+ listaFilme.get(n).toString() + "\n";
 }
 
 return temp;
 
 
 }
+
+public String retornaSalas(){
+
+    String temp  = ""; 
+    
+    for (int n = 0; n < listaSessao.size(); n++){
+    
+        temp = temp +  n + " "+ listaSessao.get(n).toString() + "\n";
+    }
+    
+    return temp;
+    
+    
+    }
+
+    public String retornaSessao(){
+
+        String temp  = ""; 
+        
+        for (int n = 0; n < listaSala.size(); n++){
+        
+            temp = temp +  n + " "+ listaSala.get(n).toString() + "\n";
+        }
+        
+        return temp;
+        
+        
+        }
+    
 
 
 }

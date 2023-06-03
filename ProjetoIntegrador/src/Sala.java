@@ -54,7 +54,12 @@ public class Sala {
         this.colunas = colunas;
     }
 
-    
+
+    public String toString(){
+
+        return "Sala: "+ this.nomeDaSala + 
+        "Quantidade de assentos: " + this.quantidadeDeAssentos; 
+    }
 
 
     

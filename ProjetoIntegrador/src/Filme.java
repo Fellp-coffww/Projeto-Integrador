@@ -12,6 +12,10 @@ private String sinopse = "";
 
 private double duracao = 0;
 
+private String atorPrincipal = "";
+
+
+
 public String getNomeDoFilme() {
     return nomeDoFilme;
 }
@@ -70,6 +74,15 @@ public String toString(){
     +"\n" + "Sinopse: " + this.sinopse;
 
 }
+
+public String getAtorPrincipal() {
+    return atorPrincipal;
+}
+
+public void setAtorPrincipal(String atorPrincipal) {
+    this.atorPrincipal = atorPrincipal;
+}
+
 
 
 

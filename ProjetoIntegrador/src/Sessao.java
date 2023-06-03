@@ -1,5 +1,3 @@
-import java.time.*;
-
 public class Sessao {
     
 
@@ -10,7 +8,7 @@ public class Sessao {
 
  private Filme filme = new Filme();
 
- private int horario = 0; // Tempo em minutos para o inicio horário 
+ private int horario = 0;
 
 public void setSala(Sala sala) {
     this.sala = sala;
@@ -45,9 +43,13 @@ public void setHorario(int horario) {
 }
 
 
- 
- 
+public String toString(){
+
+return "Filme: " +  filme.getNomeDoFilme()+ "\n" + 
+"Sala: " + sala.getNomeDaSala() + "\n" + 
+"Horário: " + this.horario; 
 
 
+}
 
 }
